@@ -1,0 +1,10 @@
+volumes:
+  jira_data:
+
+services:
+    jira:
+        image: cptactionhank/atlassian-jira-software:8.1.0
+        volumes:
+          - jira_data:/var/atlassian/jira
+        ports:
+            - 0:8080
